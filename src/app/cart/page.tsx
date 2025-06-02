@@ -12,6 +12,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { FirebaseError } from 'firebase/app';
 
 // Define CartItem type for type safety
 interface CartItem {
@@ -57,10 +58,11 @@ export default function Cart() {
   };
 
   const calculatePixTotal = () => {
-    console.log('Cart items:', cart); // Debug log
+    console.log('Cart items:', cart);
     return cart.reduce((total, item: CartItem) => {
-      console.log(`Item: ${item.name}, pixPrice: ${item.pixPrice}, quantity: ${item.quantity}`);
-      return total + (item.pixPrice || 0) * (item.quantity || 1);
+      const itemTotal = (item.pixPrice || 0) * (item.quantity || 1);
+      console.log(`Item: ${item.name}, pixPrice: ${item.pixPrice}, quantity: ${item.quantity}, itemTotal: ${itemTotal}`);
+      return total + itemTotal;
     }, 0);
   };
 
@@ -83,7 +85,7 @@ export default function Cart() {
 
     setIsLoading(true);
     try {
-      const pixTotal = calculatePixTotal(); // Save total before clearing cart
+      const pixTotal = calculatePixTotal();
       const orderData = {
         userId: auth.currentUser.uid,
         userEmail: user.email,
@@ -102,9 +104,13 @@ export default function Cart() {
       setCopied(false);
       clearCart();
       toast.success('Pedido realizado com sucesso!');
-    } catch (error) {
-      console.error('Error saving order:', error, { code: error.code, message: error.message });
-      toast.error('Erro ao processar o pedido: ' + error.message);
+    } catch (error: unknown) {
+      const firebaseError = error as FirebaseError | Error;
+      console.error('Error saving order:', firebaseError, {
+        code: 'code' in firebaseError ? firebaseError.code : 'unknown',
+        message: 'message' in firebaseError ? firebaseError.message : 'Unknown error',
+      });
+      toast.error(`Erro ao processar o pedido: ${'message' in firebaseError ? firebaseError.message : 'Erro desconhecido'}`);
     } finally {
       setIsLoading(false);
     }

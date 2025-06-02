@@ -1,0 +1,101 @@
+/* Instructions: Update global CSS to include Poppins font and custom colors for the Reborn Bebê theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 326 100% 74%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 326 100% 74%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Custom Reborn Bebê colors */
+.reborn-pink {
+  background: linear-gradient(135deg, #f0a8c1 0%, #e91e63 100%);
+}
+
+.reborn-striped {
+  background: linear-gradient(90deg,
+    #e91e63 0%, #f48fb1 5%, #ce93d8 10%, #ba68c8 15%, #9c27b0 20%,
+    #673ab7 25%, #3f51b5 30%, #2196f3 35%, #03a9f4 40%, #00bcd4 45%,
+    #009688 50%, #4caf50 55%, #8bc34a 60%, #cddc39 65%, #ffeb3b 70%,
+    #ffc107 75%, #ff9800 80%, #ff5722 85%, #f44336 90%, #e91e63 95%, #e91e63 100%
+  );
+}
+
+.discount-badge {
+  @apply bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full;
+}
+
+.price-installment {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.price-cash {
+  color: #e91e63;
+  font-weight: 600;
+}

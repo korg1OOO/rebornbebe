@@ -252,7 +252,7 @@ export default function Cart() {
                       </Button>
                     </div>
                     <p className="text-sm text-gray-600">
-                      Após realizar o pagamento, envie o comprovante para nosso WhatsApp: (41) 98530-8460.
+                      Após realizar o pagamento, envie o comprovante para nosso WhatsApp: (41) 98426-5842.
                     </p>
                     {orderPlaced && (
                       <p className="text-green-600 mt-4">

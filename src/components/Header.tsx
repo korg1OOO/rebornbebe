@@ -73,18 +73,7 @@ export default function Header({ cartItemCount }: { cartItemCount?: number }) {
               className="object-contain"
             />
           </Link>
-          <div className="flex-1 max-w-md mx-8">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Digite o que você procura"
-                className="w-full pr-10 border border-gray-300 rounded-md py-2 px-3"
-              />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <Search className="text-gray-400 w-5 h-5" />
-              </button>
-            </div>
-          </div>
+
           <div className="flex items-center space-x-4">
             <Link href="/account" className="flex items-center space-x-2 text-sm hover:text-pink-600">
               <User className="w-5 h-5" />
@@ -155,12 +144,6 @@ export default function Header({ cartItemCount }: { cartItemCount?: number }) {
           <ul className="flex items-center space-x-8 py-3 text-sm font-medium">
             <li><Link href="/products" className="text-pink-600 hover:text-pink-700">PRODUTOS</Link></li>
             <li><Link href="/pronta-entrega" className="text-gray-700 hover:text-pink-600">PRONTA ENTREGA</Link></li>
-            <li><Link href="/bebe-menina" className="text-gray-700 hover:text-pink-600">BEBÊ MENINA</Link></li>
-            <li><Link href="/bebe-menino" className="text-gray-700 hover:text-pink-600">BEBÊ MENINO</Link></li>
-            <li><Link href="/reborn-hiper-realista" className="text-gray-700 hover:text-pink-600">REBORN HIPER REALISTA</Link></li>
-            <li><Link href="/promocao-do-dia" className="text-gray-700 hover:text-pink-600">PROMOÇÃO DO DIA</Link></li>
-            <li><Link href="/silicone-solido" className="text-gray-700 hover:text-pink-600">SILICONE SÓLIDO</Link></li>
-            <li><Link href="/sob-encomenda" className="text-gray-700 hover:text-pink-600">SOB ENCOMENDA</Link></li>
             <li><Link href="/todos" className="text-gray-700 hover:text-pink-600">TODOS(AS)</Link></li>
           </ul>
         </div>

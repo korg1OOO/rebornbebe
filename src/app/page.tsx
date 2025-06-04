@@ -118,8 +118,8 @@ export default function Home() {
               <span>FALE CONOSCO</span>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4" />
-                <Link href="https://wa.me/5541985308460" target="_blank">
-                  <span>WHATSAPP: (41) 98530-8460</span>
+                <Link href="https://wa.me/5541984265842" target="_blank">
+                  <span>WHATSAPP: (41) 98426-5842</span>
                 </Link>
               </div>
             </div>
@@ -145,21 +145,6 @@ export default function Home() {
                   />
                 </div>
               </Link>
-            </div>
-
-            {/* Search */}
-            <div className="flex-1 max-w-md mx-8">
-              <div className="relative">
-                <Input
-                  type="text"
-                  placeholder="Digite o que você procura"
-                  className="w-full pr-10"
-                  ref={searchInputRef}
-                />
-                <button onClick={handleSearch} className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                  <Search className="text-gray-400 w-5 h-5" />
-                </button>
-              </div>
             </div>
 
             {/* User actions */}
@@ -195,33 +180,8 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href="/bebe-menina" className="text-gray-700 hover:text-pink-600">
-                  BEBÊ MENINA
-                </Link>
-              </li>
-              <li>
-                <Link href="/bebe-menino" className="text-gray-700 hover:text-pink-600">
-                  BEBÊ MENINO
-                </Link>
-              </li>
-              <li>
-                <Link href="/reborn-hiper-realista" className="text-gray-700 hover:text-pink-600">
-                  REBORN HIPER REALISTA
-                </Link>
-              </li>
-              <li>
                 <Link href="/promocao-do-dia" className="text-gray-700 hover:text-pink-600">
                   PROMOÇÃO DO DIA
-                </Link>
-              </li>
-              <li>
-                <Link href="/silicone-solido" className="text-gray-700 hover:text-pink-600">
-                  SILICONE SÓLIDO
-                </Link>
-              </li>
-              <li>
-                <Link href="/sob-encomenda" className="text-gray-700 hover:text-pink-600">
-                  SOB ENCOMENDA
                 </Link>
               </li>
               <li>
@@ -440,12 +400,12 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             SIGA NOSSO INSTAGRAM{' '}
             <a
-              href="https://www.instagram.com/__reborn_bebe?igsh=MWc3am1rOHp3ZDFhbw=="
+              href="https://www.instagram.com/_reborn_bebe"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-600 hover:text-pink-700"
             >
-              @__reborn_bebe
+              @_reborn_bebe
             </a>
           </h2>
         </div>
@@ -521,8 +481,8 @@ export default function Home() {
               <div className="space-y-2 text-sm text-gray-600">
                 <p className="flex items-center">
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  <Link href="https://wa.me/5541985308460" target="_blank">
-                    WHATSAPP: (41) 98530-8460
+                  <Link href="https://wa.me/5541984265842" target="_blank">
+                    WHATSAPP: (41) 98426-5842
                   </Link>
                 </p>
                 <p className="flex items-center">

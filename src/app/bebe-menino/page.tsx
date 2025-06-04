@@ -14,8 +14,8 @@ export default function BebeMenino() {
               <span>FALE CONOSCO</span>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4" />
-                <Link href="https://wa.me/5541985308460" target="_blank">
-                  <span>WHATSAPP: (41) 98530-8460</span>
+                <Link href="https://wa.me/5541984265842" target="_blank">
+                  <span>WHATSAPP: (41) 98426-5842</span>
                 </Link>
               </div>
             </div>
@@ -87,8 +87,8 @@ export default function BebeMenino() {
               <div className="space-y-2 text-sm text-gray-600">
                 <p className="flex items-center">
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  <Link href="https://wa.me/5541985308460" target="_blank">
-                    WHATSAPP: (41) 98530-8460
+                  <Link href="https://wa.me/5541984265842" target="_blank">
+                    WHATSAPP: (41) 98426-5842
                   </Link>
                 </p>
                 <p className="flex items-center">
